@@ -28,15 +28,39 @@
 
 .team__content {
   z-index: 1;
+  margin-left: 10%;
 }
 
 .team__title {
   color: $yellow;
 }
 
+.team__section--is-active{
+  .team__name{
+    color: $yellow;
+  };
+  .team__info{
+    display: flex;
+  };
+  .team__name::before {
+    border-top: 1px solid transparent;
+    border-bottom: 11px solid $yellow;}
+}
+
 .team__name {
   font-size: 20px;
   color: white;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin: 0 10px 2px 10px;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-top: 11px solid $yellow;
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .team__info {
@@ -51,6 +75,15 @@
   height: 100px;
   background-size: cover;
   border-radius: 50%;
+  margin-right: 5%;
+}
+
+.team__info__box{
+  width: 50%;
+}
+
+.team__info__occupation{
+  margin: 0;
 }
 
 .team__info__text {
