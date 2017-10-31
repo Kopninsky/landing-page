@@ -1,0 +1,58 @@
+.team {
+  background-image: url('../img/team/bg_team.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.conteiner__team {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  position: absolute;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 0;
+  }
+}
+
+.team__content {
+  z-index: 1;
+}
+
+.team__title {
+  color: $yellow;
+}
+
+.team__name {
+  font-size: 20px;
+  color: white;
+}
+
+.team__info {
+  color: white;
+  display: flex;
+  display: none;
+}
+
+.team__info__img {
+  background: url('../img/team/aphex.png') center center no-repeat;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.team__info__text {
+  color: darken(white, 30)
+}
