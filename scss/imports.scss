@@ -1,6 +1,7 @@
 //config
 @import "config/vars";
 @import "config/mixins";
+@import "config/media";
 
 //layout
 @import "layout/fonts";
@@ -10,5 +11,10 @@
 //sections
 @import "sections/main";
 @import "sections/about";
+@import "sections/burger";
 @import "sections/reviews";
+@import "sections/team";
+@import "sections/menu";
+@import "sections/delivery";
+@import "sections/map";
 @import "sections/asidenav";
