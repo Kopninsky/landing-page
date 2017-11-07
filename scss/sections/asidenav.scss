@@ -2,6 +2,10 @@
   position: fixed;
   top: 10%;
   right: 5%;
+  z-index: 10;
+  @include tablets() {
+    display: none;
+  }
 }
 
 .aside__list {
@@ -9,11 +13,11 @@
 }
 
 .aside__item {
-  width: 7px;
-  height: 7px;
+  width: rem(7px);
+  height: rem(7px);
   background-color: white;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 
 .aside__link {
@@ -22,15 +26,52 @@
 
 .aside__link--radius {
   position: absolute;
-  top: -4px;
-  right: -11px;
-  width: 10px;
-  height: 10px;
-  border: 1px solid transparent;
+  top: rem(-4px);
+  right: rem(-11px);
+  width: rem(10px);
+  height: rem(10px);
+  border: rem(1px) solid transparent;
   border-radius: 50%;
   &:hover{
-    width: 15px;
-    height: 15px;
-    border: 1px solid white;
+    width: rem(15px);
+    height: rem(15px);
+    border: rem(1px) solid white;
   }
+}
+
+.hamburger__nav{
+  position: fixed;
+  top: 7%;
+  right: 5%;
+  z-index: 10;
+  display: none;
+  @include tablets() {
+    display: flex;
+  }
+}
+.hamburger__nav--item{
+  background: white;
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    background: white;
+    width: 30px;
+    height: 5px;
+    border-radius: 3px;
+  };
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    background: white;
+    width: 30px;
+    height: 5px;
+    border-radius: 3px;
+  };
 }
