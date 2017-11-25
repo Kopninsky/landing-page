@@ -9,7 +9,12 @@
   color: white;
   background-color: $dark;
   opacity: 0.99;
-  visibility: hidden;
+  display: none;
+  z-index: 2;
+  &--is-active{
+    display: flex;
+    overflow: hidden;
+  }
 }
 
 .nav--mobile {

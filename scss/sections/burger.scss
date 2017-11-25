@@ -1,5 +1,3 @@
-// @include tablets() {
-// }
 .burger {
   background: url('../img/burger/bg_burger.png');
   background-repeat: no-repeat;
@@ -12,8 +10,10 @@
 
 .container__burger {
   flex-direction: row;
-  max-width: 90%;
-  align-items: center;
+  max-width: 95%; 
+  position: relative;
+  height: 65%;
+  overflow: hidden;
   @include phones() {
     max-width: 100%;
     width: 100%;
@@ -21,10 +21,26 @@
   }
 }
 
+.burger__slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  @include phones() {
+    height: 100%;
+  }
+}
+
+.slider__item {
+  width: 100%;
+  height: 100%;
+}
+
 .burger__content {
-  width: 94%;
-  position: relative;
-  display: flex;
+  display: inline-flex;
+  
   @include tablets() {
     flex-direction: column;
   }
@@ -36,11 +52,26 @@
 }
 
 .burger__content--arrow {
-  width: 10%;
+  width: rem(25px);
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  @include tablets() {
+    top: 35%;
+  }
+}
+
+.arrow__prev {
+  left: 0;
+}
+
+.arrow__next {
+  right: 0;
 }
 
 .arrow__link {
   display: flex;
+  overflow: hidden;
 }
 
 .arrow__icon {
@@ -55,15 +86,12 @@
   ;
 }
 
-.burger__slider {
-  @include phones() {
-    height: 100%;
-  }
-}
-
 .burger__box {
+  display: inline-block;
   width: 50%;
+  position: relative;
   @include tablets() {
+    text-align: center;
     width: 100%;
   }
 }
@@ -73,7 +101,8 @@
   max-height: 100%;
   padding: 10% 0;
   @include tablets() {
-    padding: 0 10%;
+    padding-top: 5%;
+    padding-bottom: 0;
   }
 }
 
@@ -90,8 +119,8 @@
     background-color: #f08c33;
     border-radius: rem(5px);
     @include phones() {
-      top: rem(5px);
-      left: -5%;
+      top: 5%;
+      left: 1%;
     }
     ;
   }
@@ -100,17 +129,18 @@
     bottom: 0;
     @include tablets() {
       top: 0;
-      left: 85%;
+      left: 90%;
     }
     ;
     @include phones() {
-      top: rem(-20px);
-      left: 85%;
+      top: 5%;
+      left: 80%;
     }
     ;
   }
   ;
   &--hidenbar {
+    display: none;
     justify-content: flex-start;
     left: rem(85px);
     width: rem(280px);
@@ -118,6 +148,9 @@
     background-color: white;
     opacity: 0.95;
     border-radius: rem(5px);
+    &--is-active {
+      display: flex;
+    }
     @include tablets() {
       left: rem(80px);
       top: 0;
@@ -126,8 +159,8 @@
     }
     ;
     @include phones() {
-      left: rem(65px);
-      top: rem(4px);
+      left: 22%;
+      top: 5%;
       z-index: 1;
       width: rem(304px);
     }
@@ -154,14 +187,17 @@
   background: #e25028;
   transform: rotate(45deg);
   border-radius: rem(10px);
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     width: rem(20px);
     height: rem(3px);
-    background: #e25028; 
+    background: #e25028;
     transform: rotate(90deg);
     border-radius: rem(10px);
+    @include tablets() {
+      left: 0;
+    }
   }
 }
 
@@ -241,6 +277,7 @@
 .burger__box--text {
   flex-direction: column;
   color: white;
+  white-space: normal;
   @include tablets() {
     text-align: center;
   }
@@ -252,6 +289,7 @@
   @include phones() {
     font-weight: 400;
     margin-bottom: rem(15px);
+    width: 98%;
   }
   ;
 }

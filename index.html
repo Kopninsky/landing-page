@@ -1,22 +1,27 @@
 <!DOCTYPE html>
+
 <html lang="RU-ru">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/imports.css">
 
   <title>Mr Burger</title>
+
 </head>
 
 <body>
 
   <div class="wrapper">
+
     <main class="sitecontent">
 
-      <section class="section main">
+      <section class="section main section--active">
         <div class="container main__container">
           <header class="header">
             <div class="header__logo">
@@ -114,7 +119,7 @@
 
       <section class="section burger">
         <div class="container container__burger">
-          <section class="burger__content burger__content--arrow">
+          <section class="burger__content burger__content--arrow arrow__prev">
             <a href="#" class="arrow__link">
               <svg class="arrow__icon arrow__icon--rotleft">
                 <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
@@ -122,9 +127,7 @@
             </a>
           </section>
           <ul class="burger__slider">
-            <li class="slider__item">
-              <section class="burger__content">
-
+            <li class="slider__item burger__content slider__item--is-active">
                 <div class="burger__box burger__box--img">
                   <div class="burger__options burger__options--ingredient">
                     <svg class="option__img option__img--burger">
@@ -203,11 +206,249 @@
                     </spun>
                   </div>
                 </div>
-
-              </section>
+            </li>
+            <li class="slider__item burger__content">
+                <div class="burger__box burger__box--img">
+                  <div class="burger__options burger__options--ingredient">
+                    <svg class="option__img option__img--burger">
+                      <use xlink:href="./img/sprite.svg#burger"></use>
+                    </svg>
+                    <div class="h2__titlestyle options__text options__text--ingredient">состав</div>
+                  </div>
+                  <div class="burger__options burger__options--hidenbar">
+                    <ul class="hidenbar__list">
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #e25028">
+                          <use xlink:href="./img/sprite.svg#beef"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Говядина</div>
+                        <div class="hidenbar__text hidenbar__text--weight">300 г</div>
+                        <div class="hidenbar__exit">
+                          <a href="#" class="exit__btn"></a>
+                        </div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #f8b43a">
+                          <use xlink:href="./img/sprite.svg#buns"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Булочки</div>
+                        <div class="hidenbar__text hidenbar__text--weight">100 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #8ac03e">
+                          <use xlink:href="./img/sprite.svg#salad"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Зелень</div>
+                        <div class="hidenbar__text hidenbar__text--weight">70 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #e25028">
+                          <use xlink:href="./img/sprite.svg#sauce"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Соусы</div>
+                        <div class="hidenbar__text hidenbar__text--weight">150 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #8ac03e">
+                          <use xlink:href="./img/sprite.svg#cucumber"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Овощи</div>
+                        <div class="hidenbar__text hidenbar__text--weight">200 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #f8b43a">
+                          <use xlink:href="./img/sprite.svg#cheese"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Сыр</div>
+                        <div class="hidenbar__text hidenbar__text--weight">80 г</div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="burger__options burger__options--calorific">
+                    <svg class="option__img option__img--kkal">
+                      <use xlink:href="./img/sprite.svg#kkal"></use>
+                    </svg>
+                    <div class="h2__titlestyle options__text options__text--number">1200</div>
+                    <div class="h2__titlestyle options__text options__text--kkal">ккал</div>
+                  </div>
+                  <img src="./img/burger/db_burger.png" alt="burger" class="burger__icon burger__icon--mod">
+                </div>
+                <div class="burger__box burger__box--text">
+                  <div class="burger__text burger__text--title h2__titlestyle">burger #2</div>
+                  <div class="burger__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь,
+                    двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </div>
+                  <div class="burger__text burger__text--price">
+                    <spun class="burger__price burger__price--number h2__titlestyle">500</spun>
+                    <spun class="burger__price burger__price--currency h2__titlestyle">рублей</spun>
+                    <spun class="burger__price burger__price--link">
+                      <a href="#" class="burger__link">заказать</a>
+                    </spun>
+                  </div>
+                </div>
+            </li>
+            <li class="slider__item burger__content">
+                <div class="burger__box burger__box--img">
+                  <div class="burger__options burger__options--ingredient">
+                    <svg class="option__img option__img--burger">
+                      <use xlink:href="./img/sprite.svg#burger"></use>
+                    </svg>
+                    <div class="h2__titlestyle options__text options__text--ingredient">состав</div>
+                  </div>
+                  <div class="burger__options burger__options--hidenbar">
+                    <ul class="hidenbar__list">
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #e25028">
+                          <use xlink:href="./img/sprite.svg#beef"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Говядина</div>
+                        <div class="hidenbar__text hidenbar__text--weight">300 г</div>
+                        <div class="hidenbar__exit">
+                          <a href="#" class="exit__btn"></a>
+                        </div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #f8b43a">
+                          <use xlink:href="./img/sprite.svg#buns"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Булочки</div>
+                        <div class="hidenbar__text hidenbar__text--weight">100 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #8ac03e">
+                          <use xlink:href="./img/sprite.svg#salad"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Зелень</div>
+                        <div class="hidenbar__text hidenbar__text--weight">70 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #e25028">
+                          <use xlink:href="./img/sprite.svg#sauce"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Соусы</div>
+                        <div class="hidenbar__text hidenbar__text--weight">150 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #8ac03e">
+                          <use xlink:href="./img/sprite.svg#cucumber"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Овощи</div>
+                        <div class="hidenbar__text hidenbar__text--weight">200 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #f8b43a">
+                          <use xlink:href="./img/sprite.svg#cheese"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Сыр</div>
+                        <div class="hidenbar__text hidenbar__text--weight">80 г</div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="burger__options burger__options--calorific">
+                    <svg class="option__img option__img--kkal">
+                      <use xlink:href="./img/sprite.svg#kkal"></use>
+                    </svg>
+                    <div class="h2__titlestyle options__text options__text--number">1200</div>
+                    <div class="h2__titlestyle options__text options__text--kkal">ккал</div>
+                  </div>
+                  <img src="./img/burger/db_burger.png" alt="burger" class="burger__icon burger__icon--mod">
+                </div>
+                <div class="burger__box burger__box--text">
+                  <div class="burger__text burger__text--title h2__titlestyle">burger #3</div>
+                  <div class="burger__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь,
+                    двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </div>
+                  <div class="burger__text burger__text--price">
+                    <spun class="burger__price burger__price--number h2__titlestyle">500</spun>
+                    <spun class="burger__price burger__price--currency h2__titlestyle">рублей</spun>
+                    <spun class="burger__price burger__price--link">
+                      <a href="#" class="burger__link">заказать</a>
+                    </spun>
+                  </div>
+                </div>
+            </li>
+            <li class="slider__item burger__content">
+                <div class="burger__box burger__box--img">
+                  <div class="burger__options burger__options--ingredient">
+                    <svg class="option__img option__img--burger">
+                      <use xlink:href="./img/sprite.svg#burger"></use>
+                    </svg>
+                    <div class="h2__titlestyle options__text options__text--ingredient">состав</div>
+                  </div>
+                  <div class="burger__options burger__options--hidenbar">
+                    <ul class="hidenbar__list">
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #e25028">
+                          <use xlink:href="./img/sprite.svg#beef"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Говядина</div>
+                        <div class="hidenbar__text hidenbar__text--weight">300 г</div>
+                        <div class="hidenbar__exit">
+                          <a href="#" class="exit__btn"></a>
+                        </div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #f8b43a">
+                          <use xlink:href="./img/sprite.svg#buns"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Булочки</div>
+                        <div class="hidenbar__text hidenbar__text--weight">100 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #8ac03e">
+                          <use xlink:href="./img/sprite.svg#salad"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Зелень</div>
+                        <div class="hidenbar__text hidenbar__text--weight">70 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #e25028">
+                          <use xlink:href="./img/sprite.svg#sauce"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Соусы</div>
+                        <div class="hidenbar__text hidenbar__text--weight">150 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #8ac03e">
+                          <use xlink:href="./img/sprite.svg#cucumber"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Овощи</div>
+                        <div class="hidenbar__text hidenbar__text--weight">200 г</div>
+                      </li>
+                      <li class="hidenbar__item">
+                        <svg class="hidenbar__img" style="fill: #f8b43a">
+                          <use xlink:href="./img/sprite.svg#cheese"></use>
+                        </svg>
+                        <div class="hidenbar__text hidenbar__text--item">Сыр</div>
+                        <div class="hidenbar__text hidenbar__text--weight">80 г</div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="burger__options burger__options--calorific">
+                    <svg class="option__img option__img--kkal">
+                      <use xlink:href="./img/sprite.svg#kkal"></use>
+                    </svg>
+                    <div class="h2__titlestyle options__text options__text--number">1200</div>
+                    <div class="h2__titlestyle options__text options__text--kkal">ккал</div>
+                  </div>
+                  <img src="./img/burger/db_burger.png" alt="burger" class="burger__icon burger__icon--mod">
+                </div>
+                <div class="burger__box burger__box--text">
+                  <div class="burger__text burger__text--title h2__titlestyle">burger #4</div>
+                  <div class="burger__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь,
+                    двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </div>
+                  <div class="burger__text burger__text--price">
+                    <spun class="burger__price burger__price--number h2__titlestyle">500</spun>
+                    <spun class="burger__price burger__price--currency h2__titlestyle">рублей</spun>
+                    <spun class="burger__price burger__price--link">
+                      <a href="#" class="burger__link">заказать</a>
+                    </spun>
+                  </div>
+                </div>
             </li>
           </ul>
-          <section class="burger__content burger__content--arrow">
+          <section class="burger__content burger__content--arrow arrow__next">
             <a href="#" class="arrow__link">
               <svg class="arrow__icon arrow__icon--rotright">
                 <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
@@ -235,7 +476,7 @@
                 </section>
 
               </li>
-              <li class="team__section team__section--is-active">
+              <li class="team__section">
                 <a href="#" class="team__section__link">
                   <h2 class="h2__titlestyle team__name">ричард джеймс</h2>
                 </a>
@@ -271,7 +512,7 @@
           <h2 class="h2__titlestyle menu__title">меню</h2>
           <ul class="menu__accordeon">
 
-            <li class="menu__accordeon-item item--is-activ">
+            <li class="menu__accordeon-item">
               <a class="menu__accordeon-trigger trigger__meat" href="#">
                 <div class="h2__titlestyle menu__accordeon-trigger-title">для мясоедов</div>
               </a>
@@ -407,8 +648,6 @@
                 <a class="btn__link--phones" href="#">Читать отзыв</a>
               </button>
             </div>
-
-            <section/>
         </ul>
       </section>
 
@@ -539,10 +778,11 @@
 
         </div>
       </section>
-
       
     </main>
+    
   </div>
+
   <aside class="aside__nav">
     <ul class="aside__list">
       <li class="aside__item">
@@ -618,7 +858,16 @@
       </ul>
     </nav>
   </section>
+
+  <section class="section delivery__modal">
+    <div class="modal__box">
+      <p class="modal__text">Заказ принят!</p>
+      <button class="modal__btn"></button>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
-<script href="./js/main.js"></script>
 
 </html>
