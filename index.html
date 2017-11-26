@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/imports.css">
-
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <title>Mr Burger</title>
 
 </head>
@@ -21,7 +21,7 @@
 
     <main class="sitecontent">
 
-      <section class="section main section--active">
+      <section class="section main active">
         <div class="container main__container">
           <header class="header">
             <div class="header__logo">
@@ -31,28 +31,28 @@
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a class="nav__link" href="#">о нас</a>
+                    <a class="nav__link" href="#" data-scroll-to="1">о нас</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">бургеры</a>
+                    <a class="nav__link" href="#" data-scroll-to="2">бургеры</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">команда</a>
+                    <a class="nav__link" href="#" data-scroll-to="3">команда</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">меню</a>
+                    <a class="nav__link" href="#" data-scroll-to="4">меню</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">отзывы</a>
+                    <a class="nav__link" href="#" data-scroll-to="5">отзывы</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">контакты</a>
+                    <a class="nav__link" href="#" data-scroll-to="7">контакты</a>
                   </li>
                 </ul>
               </nav>
             </div>
             <div class="header__btn">
-              <a class="head__link" href="#">Заказать</a>
+              <a class="head__link" href="#" data-scroll-to="6">Заказать</a>
             </div>
           </header>
           <div class="main__content">
@@ -65,7 +65,7 @@
             </div>
           </div>
           <section class="arrow__scroll">
-            <a href="#" class="arrow__link">
+            <a href="#" class="arrow__link" data-scroll-to="1">
               <svg class="arrow__icon">
                 <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
               </svg>
@@ -202,7 +202,7 @@
                     <spun class="burger__price burger__price--number h2__titlestyle">500</spun>
                     <spun class="burger__price burger__price--currency h2__titlestyle">рублей</spun>
                     <spun class="burger__price burger__price--link">
-                      <a href="#" class="burger__link">заказать</a>
+                      <a href="#" class="burger__link" data-scroll-to="6">заказать</a>
                     </spun>
                   </div>
                 </div>
@@ -282,7 +282,7 @@
                     <spun class="burger__price burger__price--number h2__titlestyle">500</spun>
                     <spun class="burger__price burger__price--currency h2__titlestyle">рублей</spun>
                     <spun class="burger__price burger__price--link">
-                      <a href="#" class="burger__link">заказать</a>
+                      <a href="#" class="burger__link" data-scroll-to="6">заказать</a>
                     </spun>
                   </div>
                 </div>
@@ -362,7 +362,7 @@
                     <spun class="burger__price burger__price--number h2__titlestyle">500</spun>
                     <spun class="burger__price burger__price--currency h2__titlestyle">рублей</spun>
                     <spun class="burger__price burger__price--link">
-                      <a href="#" class="burger__link">заказать</a>
+                      <a href="#" class="burger__link" data-scroll-to="6">заказать</a>
                     </spun>
                   </div>
                 </div>
@@ -442,7 +442,7 @@
                     <spun class="burger__price burger__price--number h2__titlestyle">500</spun>
                     <spun class="burger__price burger__price--currency h2__titlestyle">рублей</spun>
                     <spun class="burger__price burger__price--link">
-                      <a href="#" class="burger__link">заказать</a>
+                      <a href="#" class="burger__link" data-scroll-to="6">заказать</a>
                     </spun>
                   </div>
                 </div>
@@ -734,9 +734,9 @@
         </div>
       </section>
 
-      <section class="section map">
+      <section class="section map" >
         <div class="conteiner conteiner__map">
-
+          <div class="ymap" id="map"></div>          
           <footer class="footer">
             <div class="footer__box">
               <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
@@ -785,42 +785,42 @@
 
   <aside class="aside__nav">
     <ul class="aside__list">
-      <li class="aside__item">
+      <li class="aside__item aside__item--active" data-scroll-to="0">
         <a class="aside__link" href="#main">
           <div class="aside__link--radius"></div>
         </a>
       </li>
-      <li class="aside__item">
+      <li class="aside__item" data-scroll-to="1">
         <a class="aside__link" href="#about">
           <div class="aside__link--radius"></div>
         </a>
       </li>
-      <li class="aside__item">
+      <li class="aside__item" data-scroll-to="2">
         <a class="aside__link" href="#burgers">
           <div class="aside__link--radius"></div>
         </a>
       </li>
-      <li class="aside__item">
+      <li class="aside__item" data-scroll-to="3">
         <a class="aside__link" href="#team">
           <div class="aside__link--radius"></div>
         </a>
       </li>
-      <li class="aside__item">
+      <li class="aside__item" data-scroll-to="4">
         <a class="aside__link" href="#menu">
           <div class="aside__link--radius"></div>
         </a>
       </li>
-      <li class="aside__item">
+      <li class="aside__item" data-scroll-to="5">
         <a class="aside__link" href="#rewies">
           <div class="aside__link--radius"></div>
         </a>
       </li>
-      <li class="aside__item">
+      <li class="aside__item" data-scroll-to="6">
         <a class="aside__link" href="#delivery">
           <div class="aside__link--radius"></div>
         </a>
       </li>
-      <li class="aside__item">
+      <li class="aside__item" data-scroll-to="7">
         <a class="aside__link" href="#map">
           <div class="aside__link--radius"></div>
         </a>
@@ -838,22 +838,22 @@
     <nav class="nav nav--mobile">
       <ul class="nav__list nav__list--mobile">
         <li class="nav__item nav__item--mobile">
-          <a class="nav__link nav__link--mobile" href="#">о нас</a>
+          <a class="nav__link nav__link--mobile" href="#" data-scroll-to="1">о нас</a>
         </li>
         <li class="nav__item nav__item--mobile">
-          <a class="nav__link nav__link--mobile" href="#">бургеры</a>
+          <a class="nav__link nav__link--mobile" href="#" data-scroll-to="2">бургеры</a>
         </li>
         <li class="nav__item nav__item--mobile">
-          <a class="nav__link nav__link--mobile" href="#">команда</a>
+          <a class="nav__link nav__link--mobile" href="#" data-scroll-to="3">команда</a>
         </li>
         <li class="nav__item nav__item--mobile">
-          <a class="nav__link nav__link--mobile" href="#">меню</a>
+          <a class="nav__link nav__link--mobile" href="#" data-scroll-to="4">меню</a>
         </li>
         <li class="nav__item nav__item--mobile">
-          <a class="nav__link nav__link--mobile" href="#">отзывы</a>
+          <a class="nav__link nav__link--mobile" href="#" data-scroll-to="5">отзывы</a>
         </li>
         <li class="nav__item nav__item--mobile">
-          <a class="nav__link nav__link--mobile" href="#">контакты</a>
+          <a class="nav__link nav__link--mobile" href="#" data-scroll-to="7">контакты</a>
         </li>
       </ul>
     </nav>
@@ -866,7 +866,10 @@
     </div>
   </section>
 
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.7/mobile-detect.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

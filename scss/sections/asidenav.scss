@@ -39,6 +39,14 @@
   }
 }
 
+.aside__item--active{
+  .aside__link--radius{
+    width: rem(15px);
+    height: rem(15px);
+    border: rem(1px) solid white;
+    }
+  }
+
 .hamburger__nav{
   position: fixed;
   top: rem(55px);

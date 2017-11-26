@@ -12,10 +12,14 @@
   color: $yellow;
   text-align: center;
   margin: 10% 0 5% 0;
+  @include tablets() {
+    font-size: rem(80px);
+    margin: 6% 0 rem(40px) 0;
+  };
   @include phones() {
     font-size: rem(40px);
-    margin: 5% 0 5% 0;
-  }
+    margin: 6% 0 rem(10px) 0;
+  };
 }
 
 .delivery__form {
@@ -36,8 +40,8 @@
   width: 45%;
   margin-left: 5%;
   @include tablets() {
-    width: 78%;
-    margin-left: 10%;
+    width: 98%;
+    margin-left: 2%;
   }
   ;
   @include phones() {
@@ -52,6 +56,7 @@
   margin-bottom: rem(16px);
   @include phones() {
     justify-content: center;
+    margin-bottom: rem(10px);
   }
 }
 
@@ -67,7 +72,12 @@
   color: #fff;
   font-size: rem(14px);
   @include tablets() {
+    font-size: rem(25px);
+    line-height: rem(20px);
+  };
+  @include phones() {
     font-size: rem(15px);
+    line-height: rem(10px);
   }
 }
 
@@ -88,6 +98,14 @@
   font-size: rem(14px);
   color: white;
   margin-left: rem(10px);
+  @include tablets() {
+    font-size: rem(20px);
+    line-height: rem(20px);
+  };
+  @include phones() {
+    font-size: rem(15px);
+    line-height: rem(15px);
+  };
 }
 
 .delivery__radio {
@@ -135,11 +153,7 @@
   }
 }
 
-.delivery__radio--title {
-  font-size: rem(14px);
-  color: white;
-  margin-left: rem(10px);
-}
+
 
 .delivery__radio--checkbox {
   .delivery__radio--fake {
@@ -182,6 +196,14 @@
     background-color: darken($orange, 10%);
   }
   ;
+  @include tablets() {
+    font-size: rem(20px);
+    line-height: rem(20px);
+  };
+  @include phones() {
+    font-size: rem(15px);
+    line-height: rem(15px);
+  };
 }
 
 .delivery__form--button_reset {

@@ -12,13 +12,16 @@
   display: flex;
   justify-content: center;
   color: $dark;
-  padding: 0;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: rem(60px);
+  @include tablets() {
+    font-size: rem(100px);
+    line-height: rem(80px);
+    margin-bottom: rem(50px);
+  }
   @include phones() {
-    margin: rem(40px) 0 0 0;
-    ;
+    font-size: rem(60px);
+    line-height: rem(50px);
+    margin-bottom: rem(20px);
   }
 }
 
@@ -29,6 +32,7 @@
   text-align: center;
   @include phones() {
     flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -39,10 +43,16 @@
   align-items: center;
   justify-content: center;
   padding: 0 rem(7.7px);
+  margin: 0 rem(7.7px);
+  @include tablets() {
+  margin: 0 rem(7px);
+  padding: 0;
+  };
   @include phones() {
-    padding: 0 rem(5px);
     flex-direction: row;
     width: 100%;
+    justify-content: baseline;
+    margin: rem(7.7px) 0;
   }
   ;
 }
@@ -62,10 +72,12 @@
   text-align: center;
   justify-content: center;
   @include tablets() {
-    width: 70%;
+    width: rem(150px);
+    height: rem(150px);
   }
   @include phones() {
-    width: rem(100px);
+    width: rem(90px);
+    height: rem(100px);
   }
 }
 
@@ -90,9 +102,14 @@
   text-align: center;
   padding-bottom: rem(10px);
   width: 100%;
+  @include tablets() {
+    font-weight: 500;
+    font-size: rem(28px);
+    };
   @include phones() {
-    white-space: nowrap;
-    padding-bottom: rem(4px);
+    font-size: rem(21.4px);
+    padding-bottom: 0;
+    margin-bottom: rem(5px);
     text-align: start;
   }
 }
@@ -102,10 +119,14 @@
   font-weight: 300;
   color: $dark;
   text-align: center;
-  line-height: rem(24px);
+  @include tablets() {
+    font-size: rem(17px);
+    line-height: rem(18px);
+    };
   @include phones() {
     font-size: rem(15px);
-    width:  95%;
+    width: 95%;
     text-align: justify;
+    line-height: rem(20px);
   }
 }
