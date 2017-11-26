@@ -57,7 +57,6 @@ let inScroll = false;
 let md = new MobileDetect(window.navigator.userAgent);
 let isMobile = md.mobile();
 
-
 $('.wrapper').on({
   wheel : e => {
     let deltaY = e.originalEvent.deltaY;
@@ -66,7 +65,6 @@ $('.wrapper').on({
   },
   touchmove : e => (e.preventDefault())
 } );
-
 
 $(document).on('keydown', (e) =>{
   let section = defineSections(sections);
@@ -83,13 +81,13 @@ $(document).on('keydown', (e) =>{
   }
 })
 
-
 $('[data-scroll-to]').on('click touchstart', (e) =>{
   e.preventDefault();
   let elem = $(e.currentTarget);
   let elemIndex = parseInt(elem.attr('data-scroll-to'));
   performTransition(elemIndex);
 });
+
 if(isMobile){
   $(window).swipe( {
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -97,7 +95,6 @@ if(isMobile){
     }
   });
 }
-
 /*----------------------------------------------------------------------------------Hamburger Menu----------*/
 $('.hamburger__nav').on('click touchstart', (e) =>{
   e.preventDefault();
@@ -108,9 +105,6 @@ $('.hamburger__nav').on('click touchstart', (e) =>{
 hidenbarFunc($('.burger__options--ingredient'),$('.burger__options--hidenbar'),'burger__options--hidenbar--is-active');
 hidenbarFunc( $('.exit__btn'),$('.burger__options--hidenbar'),'burger__options--hidenbar--is-active');
 /*-----------------------------------------------------------------------------Burgers Menu Slider----------*/
-
-
-
 $('.arrow__next').on('click touchstart', (e) =>{
   e.preventDefault();
   let itemList = $('.burger__slider'),
@@ -146,13 +140,28 @@ $('.arrow__prev').on('click touchstart', (e) =>{
     })
   }
 });
-
 /*-------------------------------------------------------------------------------------Team Toggle----------*/
 toggleFunc($('.team__section'),'team__section--active');
 /*-------------------------------------------------------------------------------------Menu Toggle----------*/
 toggleFunc($('.menu__accordeon-item'),'item--is-activ');
-/*---------Delivery Modal----------*/
-
+/*----------------------------------------------------------------------------------Delivery Modal----------*/
+$('.delivery__form--button_submit').on('click touchstart', (e) =>{
+  e.preventDefault();
+  $('.delivery__modal').addClass('delivery__modal--is-active');
+});
+$('.modal__btn').on('click touchstart', (e) =>{
+  e.preventDefault();
+  $('.delivery__modal').removeClass('delivery__modal--is-active');
+});
+/*-----------------------------------------------------------------------------------Reviews Modal----------*/
+$('.btn__link--phones').on('click touchstart', (e) =>{
+  e.preventDefault();
+  $('.revew__modal').addClass('revew__modal--is-active');
+});
+$('.revew__modal__btn').on('click touchstart', (e) =>{
+  e.preventDefault();
+  $('.revew__modal').removeClass('revew__modal--is-active');
+});
 /*-----------------------------------------------------------------------------------------Map API----------*/
 ymaps.ready(init);
 var myMap, 
@@ -194,7 +203,6 @@ var placemarks = [ // Массив объектов который мы пере
     ]
   }
 ];
-
 /*Инициализация функции создания карты и добавление на карту placemark*/
 function init() {
   var map = new ymaps.Map("map", {
@@ -218,8 +226,5 @@ function init() {
         });
         map.geoObjects.add(placemark);
   })
-} 
-
-
-
-
+}
+/*-------------------------------------------------------------------------------------AJAX POST------------*/

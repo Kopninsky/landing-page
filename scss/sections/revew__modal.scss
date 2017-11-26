@@ -1,4 +1,4 @@
-.delivery__modal {
+.revew__modal {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -12,49 +12,42 @@
     width: 100%;
     height: 100%;
     background-color: $dark;
-    opacity: 0.5;
-  };
-  &--is-active{
-    display: flex; 
-  }
-}
-
-.modal__box {
-  background-color: white;
-  width: rem(400px);
-  height: rem(200px);
-  align-self: center;
-  z-index: 10;
-  border-radius: rem(40px);
-  text-align: center;
-  @include phones() {
-    width: rem(200px);
-    height: rem(200px);
   }
   ;
+  &--is-active {
+    display: flex;
+  }
 }
 
-.modal__text {
-  font-family: gagalin;
-  font-size: rem(30px);
-  color: $dark;
+.revew__modal__box {
+  background-color: $dark;
+  width: 90%;
+  align-self: center;
+  z-index: 10;
+  text-align: center;
+}
+
+.revew__modal__text {
+  font-size: rem(20px);
+  color: white;
   text-align: center;
   padding-bottom: rem(10px);
   width: 100%;
   @include tablets() {
     font-weight: 500;
+    font-size: rem(25px);
   }
   ;
   @include phones() {
-    font-size: rem(20px);
+    font-size: rem(15px);
   }
 }
 
-.modal__btn {
+.revew__modal__btn {
   padding: rem(10px) rem(17px);
   border-radius: rem(5px);
   border: rem(1px) solid transparent;
-  background-color: $orange;
+  background-color: darken($dark, 10%);
   color: #fff;
   font: {
     size: rem(20px);
@@ -64,8 +57,7 @@
   line-height: 1.42;
   transition: .5s;
   &:hover {
-    background-color: darken($orange, 10%);
+    background-color: $dark;
   }
   ;
 }
- 

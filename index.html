@@ -654,77 +654,77 @@
       <section class="section delivery">
         <div class="conteiner conteiner__delivery">
           <h2 class="h2__titlestyle delivery__title">закажите доставку</h2>
-          <form class="delivery__form">
+          <form class="delivery__form" action="ajax.php" method="post" id="delivery__form">
             <div class="delivery__form--content">
               <div class="delivery__form--box">
 
                 <div class="delivery__form--row">
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Имя</div>
-                    <input class="delivery__form--input" name="name" type="text" placeholder="">
+                  <label class="delivery__form--block" for="user-name">
+                    <div class="delivery__form--label" >Имя</div>
+                    <input class="delivery__form--input" id="user-name" name="user-name" type="text" placeholder="">
                   </label>
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Телефон</div>
-                    <input class="delivery__form--input" name="phone" type="text" placeholder="">
-                  </label>
-                </div>
-
-                <div class="delivery__form--row">
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Улица</div>
-                    <input class="delivery__form--input" name="street" type="text" placeholder="">
+                  <label class="delivery__form--block" for="user-phone">
+                    <div class="delivery__form--label" >Телефон</div>
+                    <input class="delivery__form--input" id="user-phone" name="user-phone" type="text" placeholder="">
                   </label>
                 </div>
 
                 <div class="delivery__form--row">
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Дом</div>
-                    <input class="delivery__form--input" name="home" type="text" placeholder="">
+                  <label class="delivery__form--block" for="street">
+                    <div class="delivery__form--label" >Улица</div>
+                    <input class="delivery__form--input" id="street" name="street" type="text" placeholder="">
                   </label>
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Корпус</div>
-                    <input class="delivery__form--input" name="part" type="text" placeholder="">
+                </div>
+
+                <div class="delivery__form--row">
+                  <label class="delivery__form--block" for="home">
+                    <div class="delivery__form--label" >Дом</div>
+                    <input class="delivery__form--input" id="home" name="home" type="text" placeholder="">
                   </label>
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Квартира</div>
-                    <input class="delivery__form--input" name="flat" type="text" placeholder="">
+                  <label class="delivery__form--block" for="part">
+                    <div class="delivery__form--label" >Корпус</div>
+                    <input class="delivery__form--input" id="part" name="part" type="text" placeholder="">
                   </label>
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Этаж</div>
-                    <input class="delivery__form--input" name="floor" type="text" placeholder="">
+                  <label class="delivery__form--block" for="flat">
+                    <div class="delivery__form--label" >Квартира</div>
+                    <input class="delivery__form--input" id="flat" name="flat" type="text" placeholder="">
+                  </label>
+                  <label class="delivery__form--block" for="floor">
+                    <div class="delivery__form--label" >Этаж</div>
+                    <input class="delivery__form--input" id="floor" name="floor" type="text" placeholder="">
                   </label>
                 </div>
 
               </div>
               <div class="delivery__form--box">
                 <div class="delivery__form--row">
-                  <label class="delivery__form--block">
-                    <div class="delivery__form--label">Комментарий</div>
-                    <textarea class="delivery__form--input delivery__form--input_textarea" name="comment"></textarea>
+                  <label class="delivery__form--block" for="comment">
+                    <div class="delivery__form--label" >Комментарий</div>
+                    <textarea class="delivery__form--input delivery__form--input_textarea" id="comment" name="comment"></textarea>
                   </label>
                 </div>
                 <div class="delivery__form--buttons">
                   <div class="delivery__form--row">
                     <label class="delivery__radio">
-                      <input class="delivery__radio--item" name="change" type="radio">
+                      <input class="delivery__radio--item" id="pay-cash" name="pay-option" type="radio">
                       <div class="delivery__radio--fake"></div>
                       <div class="delivery__radio--title">Потребуется сдача</div>
                     </label>
                     <label class="delivery__radio">
-                      <input class="delivery__radio--item" name="ccard" type="radio">
+                      <input class="delivery__radio--item" id="pay-card" name="pay-option" type="radio">
                       <div class="delivery__radio--fake"></div>
                       <div class="delivery__radio--title">Оплата по карте</div>
                     </label>
                   </div>
                   <div class="delivery__form--row">
-                    <label class="delivery__radio delivery__radio--checkbox">
-                      <input class="delivery__radio--item" name="callback" type="checkbox">
+                    <label class="delivery__radio delivery__radio--checkbox" for="callback">
+                      <input class="delivery__radio--item" id="callback" name="callback" type="checkbox" value="1">
                       <div class="delivery__radio--fake"></div>
-                      <div class="delivery__radio--title">Не перезванивать</div>
+                      <div class="delivery__radio--title" >Не перезванивать</div>
                     </label>
                   </div>
                   <div class="delivery__form--row">
-                    <input class="delivery__form--button" name="" type="submit" value="Заказать">
+                    <input class="delivery__form--button delivery__form--button_submit" name="submit" type="submit" value="Заказать">
                     <input class="delivery__form--button delivery__form--button_reset" name="reset" type="reset" value="Очистить">
                   </div>
                 </div>
@@ -861,11 +861,17 @@
 
   <section class="section delivery__modal">
     <div class="modal__box">
-      <p class="modal__text">Заказ принят!</p>
-      <button class="modal__btn"></button>
+      <p class="modal__text">Товарищ!</p>
+      <button class="modal__btn">Спасибо!</button>
     </div>
   </section>
 
+  <section class="section revew__modal ">
+    <div class="revew__modal__box">
+      <p class="revew__modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero incidunt id harum dicta cupiditate quasi non nostrum! Explicabo id dignissimos dolor! Ex obcaecati non nostrum in id nesciunt doloribus deleniti.</p>
+      <button class="revew__modal__btn">вернуться</button>
+    </div>
+  </section>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.7/mobile-detect.min.js"></script>

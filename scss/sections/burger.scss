@@ -7,7 +7,7 @@
 
 .container__burger {
   flex-direction: row;
-  max-width: 92%;
+  max-width: 90%;
   position: relative;
   height: 65%;
   overflow: hidden;
@@ -124,6 +124,9 @@
     top: 0;
     background-color: #f08c33;
     border-radius: rem(5px);
+  &:hover{
+    background-color: $orange;
+  };
     @include phones() {
       top: 5%;
       left: 1%;
@@ -132,7 +135,7 @@
   }
   ;
   &--calorific {
-    bottom: 0;
+    bottom: rem(5px);
     @include tablets() {
       top: 0;
       left: 90%;
@@ -281,11 +284,20 @@
   ;
 }
 
+.burger__box--img {
+  padding-left: rem(25px);
+  @include tablets() {
+    padding: 0;
+  }
+}
+
 .burger__box--text {
   flex-direction: column;
   color: white;
   white-space: normal;
+  padding-right: rem(25px);
   @include tablets() {
+    padding-right: 5%;
     text-align: center;
   }
 }
@@ -293,7 +305,13 @@
 .burger__text {
   margin: rem(5px) 0;
   font-weight: 300;
+  padding-bottom: rem(10px);
+  @include tablets() {
+    padding-bottom: 0;
+  }
+  ;
   @include phones() {
+    padding-bottom: 0;
     font-weight: 400;
     margin: 0 rem(10px);
     width: 100%;
@@ -305,7 +323,13 @@
 .burger__text--title {
   font-size: rem(70px);
   line-height: rem(70px);
+  padding-bottom: rem(20px);
+  @include tablets() {
+    padding-bottom: 0;
+  }
+  ;
   @include phones() {
+    padding-bottom: 0;
     font-size: rem(63px);
     line-height: rem(63px);
   }
