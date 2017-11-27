@@ -1,10 +1,383 @@
-.burger{
-  background: url('../img/burger/bg_burger.png');
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
+.burger {
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container__burger {
+  flex-direction: row;
+  max-width: 90%;
   position: relative;
+  height: 65%;
+  overflow: hidden;
+  @include phones() {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.burger__slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  @include phones() {
+    height: 100%;
+  }
+}
+
+.slider__item {
+  width: 100%;
+  height: 100%;
+  @include phones() {
+    justify-content: center;
+  }
+}
+
+.burger__content {
+  display: inline-flex;
+  
+  @include tablets() {
+    flex-direction: column;
+  }
+  ;
+  @include phones() {
+    width: 100%
+  }
+  ;
+}
+
+.burger__content--arrow {
+  width: rem(25px);
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  @include tablets() {
+    top: 35%;
+  }
+}
+
+.arrow__prev {
+  left: 0;
+}
+
+.arrow__next {
+  right: 0;
+}
+
+.arrow__link {
+  display: flex;
+  overflow: hidden;
+}
+
+.arrow__icon {
+  width: rem(25px);
+  &--rotleft {
+    transform: rotate(90deg);
+  }
+  ;
+  &--rotright {
+    transform: rotate(-90deg);
+  }
+  ;
+}
+
+.burger__box {
+  display: inline-block;
+  width: 50%;
+  position: relative;
+  @include tablets() {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.burger__icon {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10% 0;
+  @include tablets() {
+    max-width: 75%;
+    padding-top: 5%;
+    padding-bottom: 0;
+  };
+  @include phones() {
+    max-width: 60%;
+    padding-top: 5%;
+    padding-bottom: 0;
+  };
+}
+
+.burger__options {
+  position: absolute;
+  left: 0;
+  width: rem(85px);
+  height: rem(85px);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  &--ingredient {
+    top: 0;
+    background-color: #f08c33;
+    border-radius: rem(5px);
+  &:hover{
+    background-color: $orange;
+  };
+    @include phones() {
+      top: 5%;
+      left: 1%;
+    }
+    ;
+  }
+  ;
+  &--calorific {
+    bottom: rem(5px);
+    @include tablets() {
+      top: 0;
+      left: 90%;
+    }
+    ;
+    @include phones() {
+      top: 5%;
+      left: 80%;
+    }
+    ;
+  }
+  ;
+  &--hidenbar {
+    display: none;
+    justify-content: flex-start;
+    left: rem(85px);
+    width: rem(280px);
+    height: rem(340px);
+    background-color: white;
+    opacity: 0.95;
+    border-radius: rem(5px);
+    &--is-active {
+      display: flex;
+    }
+    @include tablets() {
+      left: rem(80px);
+      top: 0;
+      z-index: 1;
+      width: rem(450px);
+    }
+    ;
+    @include phones() {
+      left: 22%;
+      top: 5%;
+      z-index: 1;
+      width: rem(304px);
+    }
+    ;
+  }
+  ;
+}
+
+.hidenbar__exit {
+  display: none;
+  position: absolute;
+  top: rem(15px);
+  right: rem(25px);
+  @include tablets() {
+    display: inline-flex;
+  }
+  ;
+}
+
+.exit__btn {
+  position: absolute;
+  width: rem(20px);
+  height: rem(3px);
+  background: #e25028;
+  transform: rotate(45deg);
+  border-radius: rem(10px);
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(20px);
+    height: rem(3px);
+    background: #e25028;
+    transform: rotate(90deg);
+    border-radius: rem(10px);
+    @include tablets() {
+      left: 0;
+    }
+  }
+}
+
+.hidenbar__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.hidenbar__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.hidenbar__img {
+  width: rem(45px);
+  height: rem(45px);
+}
+
+.hidenbar__text {
+  margin: auto;
+  &--item {
+    text-align: start;
+  }
+  ;
+  &--weight {
+    font-weight: 300;
+    text-align: end;
+    margin-right: rem(10px);
+    @include tablets() {
+      margin-right: rem(20px);
+    }
+    @include phones() {
+      margin-right: rem(20px);
+    }
+  }
+  ;
+}
+
+.option__img {
+  margin: auto;
+  width: rem(45px);
+  height: rem(45px);
+  fill: #fff;
+  &--burger {
+    margin-top: rem(10px)
+  }
+  ;
+  &--kkal {
+    width: rem(60px);
+    height: rem(60px);
+  }
+  ;
+}
+
+.options__text {
+  position: absolute;
+  color: white;
+  font-size: rem(17px);
+  
+  &--ingredient {
+    bottom: rem(7px)
+  }
+  ;
+  &--number {
+    font-size: rem(20px);
+    top: rem(38px)
+  }
+  ;
+  &--kkal {
+    bottom: rem(-10px)
+  }
+  ;
+}
+
+.burger__box--img {
+  padding-left: rem(25px);
+  @include tablets() {
+    padding: 0;
+  }
+}
+
+.burger__box--text {
+  flex-direction: column;
+  color: white;
+  white-space: normal;
+  padding-right: rem(25px);
+  @include tablets() {
+    padding-right: 5%;
+    text-align: center;
+  }
+}
+
+.burger__text {
+  margin: rem(5px) 0;
+  font-weight: 300;
+  padding-bottom: rem(10px);
+  @include tablets() {
+    padding-bottom: 0;
+  }
+  ;
+  @include phones() {
+    padding-bottom: 0;
+    font-weight: 400;
+    margin: 0 rem(10px);
+    width: 100%;
+    padding: 0 5%;
+  }
+  ;
+}
+
+.burger__text--title {
+  font-size: rem(70px);
+  line-height: rem(70px);
+  padding-bottom: rem(20px);
+  @include tablets() {
+    padding-bottom: 0;
+  }
+  ;
+  @include phones() {
+    padding-bottom: 0;
+    font-size: rem(63px);
+    line-height: rem(63px);
+  }
+  ;
+}
+
+.burger__text--price {
+  display: flex;
+  @include tablets() {
+    justify-content: center;
+  }
+  ;
+}
+
+.burger__price {
+  color: $orange;
+  align-self: baseline;
+  &--number {
+    font-size: rem(70px);
+  }
+  ;
+  &--currency {
+    font-size: rem(30px);
+  }
+  ;
+  &--link {
+    align-self: center;
+  }
+  ;
+}
+
+.burger__link {
+  margin-left: rem(30px);
+  padding: rem(10px) rem(17px);
+  border-radius: rem(5px);
+  border: rem(1px) solid transparent;
+  background-color: $orange;
+  color: #fff;
+  text-transform: uppercase;
+  font: {
+    size: rem(14px);
+    weight: 500;
+  }
+  ;
+  line-height: 1.42;
+  transition: .5s;
+  &:hover {
+    background-color: darken($orange, 10%);
+  }
+  ;
 }

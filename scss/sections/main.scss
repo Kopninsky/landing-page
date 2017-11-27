@@ -49,10 +49,17 @@
     @include circle(rem(5px),
     #fff);
     margin: 0 rem(12px);
+    @include tablets() {
+      margin: 0 47%;
+      @include circle(rem(7px),
+      #fff);
+    }
+    ;
   }
   &:last-child:after {
     display: none;
   }
+  ;
 }
 
 .nav__link {
@@ -115,12 +122,6 @@
     padding-bottom: 0;
     letter-spacing: -2px;
   }
-}
-
-.main__img {
-  display: flex;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .main__textbox {

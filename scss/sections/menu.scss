@@ -101,6 +101,10 @@
   }
 
   .item--is-activ {
+    @include phones() {
+      position: absolute;
+      z-index: 1;
+    };
     .menu__accordeon-trigger-title {
       color: $yellow;
     }
