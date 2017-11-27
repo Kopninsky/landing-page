@@ -1973,6 +1973,7 @@ a {
 
 .modal__box {
   background-color: white;
+  border: 2px solid orange;
   width: 25rem;
   height: 12.5rem;
   -webkit-align-self: center;
@@ -1991,8 +1992,8 @@ a {
   font-size: 1.875rem;
   color: #2f3234;
   text-align: center;
-  padding-bottom: 0.625rem;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 0; }
   @media screen and (max-width: 768px) {
     .modal__text {
       font-weight: 500; } }
@@ -2014,6 +2015,14 @@ a {
   transition: .5s; }
   .modal__btn:hover {
     background-color: #bd3d1a; }
+
+.success {
+  font-size: 1.25rem;
+  color: #2f3234; }
+
+.error {
+  font-size: 1.25rem;
+  color: #e25028; }
 
 .revew__modal {
   position: fixed;

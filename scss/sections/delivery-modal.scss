@@ -21,6 +21,7 @@
 
 .modal__box {
   background-color: white;
+  border: 2px solid orange;
   width: rem(400px);
   height: rem(200px);
   align-self: center;
@@ -39,8 +40,8 @@
   font-size: rem(30px);
   color: $dark;
   text-align: center;
-  padding-bottom: rem(10px);
   width: 100%;
+  margin-bottom: 0;
   @include tablets() {
     font-weight: 500;
   }
@@ -68,4 +69,11 @@
   }
   ;
 }
- 
+.success{
+  font-size: rem(20px);
+  color: $dark;
+}
+.error{
+  font-size: rem(20px);
+  color: $orange;
+} 

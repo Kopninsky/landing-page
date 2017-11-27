@@ -654,7 +654,7 @@
       <section class="section delivery">
         <div class="conteiner conteiner__delivery">
           <h2 class="h2__titlestyle delivery__title">закажите доставку</h2>
-          <form class="delivery__form" action="ajax.php" method="post" id="delivery__form">
+          <form class="delivery__form"  action="server.php" method="post" id="delivery__form">
             <div class="delivery__form--content">
               <div class="delivery__form--box">
 
@@ -665,7 +665,7 @@
                   </label>
                   <label class="delivery__form--block" for="user-phone">
                     <div class="delivery__form--label" >Телефон</div>
-                    <input class="delivery__form--input" id="user-phone" name="user-phone" type="text" placeholder="">
+                    <input class="delivery__form--input" id="user-phone" name="user-phone" type="tel" placeholder="">
                   </label>
                 </div>
 
@@ -683,15 +683,15 @@
                   </label>
                   <label class="delivery__form--block" for="part">
                     <div class="delivery__form--label" >Корпус</div>
-                    <input class="delivery__form--input" id="part" name="part" type="text" placeholder="">
+                    <input class="delivery__form--input" id="part" name="part" type="number" placeholder="">
                   </label>
                   <label class="delivery__form--block" for="flat">
                     <div class="delivery__form--label" >Квартира</div>
-                    <input class="delivery__form--input" id="flat" name="flat" type="text" placeholder="">
+                    <input class="delivery__form--input" id="flat" name="flat" type="number" placeholder="">
                   </label>
                   <label class="delivery__form--block" for="floor">
                     <div class="delivery__form--label" >Этаж</div>
-                    <input class="delivery__form--input" id="floor" name="floor" type="text" placeholder="">
+                    <input class="delivery__form--input" id="floor" name="floor" type="number" placeholder="">
                   </label>
                 </div>
 
@@ -717,14 +717,14 @@
                     </label>
                   </div>
                   <div class="delivery__form--row">
-                    <label class="delivery__radio delivery__radio--checkbox" for="callback">
-                      <input class="delivery__radio--item" id="callback" name="callback" type="checkbox" value="1">
+                    <label class="delivery__radio delivery__radio--checkbox" for="dont-disturb">
+                      <input class="delivery__radio--item" id="dont-disturb" name="dont-disturb" type="checkbox" value="1">
                       <div class="delivery__radio--fake"></div>
                       <div class="delivery__radio--title" >Не перезванивать</div>
                     </label>
                   </div>
                   <div class="delivery__form--row">
-                    <input class="delivery__form--button delivery__form--button_submit" name="submit" type="submit" value="Заказать">
+                    <input class="delivery__form--button delivery__form--button_submit" name="submit" type="submit" id="submit" value="Заказать">
                     <input class="delivery__form--button delivery__form--button_reset" name="reset" type="reset" value="Очистить">
                   </div>
                 </div>
@@ -861,7 +861,7 @@
 
   <section class="section delivery__modal">
     <div class="modal__box">
-      <p class="modal__text">Товарищ!</p>
+      <p class="modal__text">Ваш заказ : </p>
       <button class="modal__btn">Спасибо!</button>
     </div>
   </section>

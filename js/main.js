@@ -146,7 +146,7 @@ toggleFunc($('.team__section'),'team__section--active');
 toggleFunc($('.menu__accordeon-item'),'item--is-activ');
 /*----------------------------------------------------------------------------------Delivery Modal----------*/
 $('.delivery__form--button_submit').on('click touchstart', (e) =>{
-  e.preventDefault();
+  // e.preventDefault();
   $('.delivery__modal').addClass('delivery__modal--is-active');
 });
 $('.modal__btn').on('click touchstart', (e) =>{
@@ -228,3 +228,43 @@ function init() {
   })
 }
 /*-------------------------------------------------------------------------------------AJAX POST------------*/
+let submitForm = function (ev) {
+  ev.preventDefault();
+
+  console.log('insubform');
+
+  let form = $(ev.currentTarget),
+      data = form.serialize(),
+      url = form.attr('action');
+  
+  console.log(form);
+  console.log(data);
+  console.log(url);
+
+  let request = $.ajax({
+      type: 'POST',
+      url: url,
+      data: data,
+      dataType: 'JSON'
+  });
+   
+  request.done(function(msg) {
+    let mes = msg.mes,
+        status = msg.status;
+
+    if (status === 'OK') {
+      $('.modal__text').append('<p class="success">' + mes + '</p>');
+      // form.append('<p class="success">' + mes + '</p>');
+    }else{
+      $('.modal__text').append('<p class="error">' + mes + '</p>');
+      // form.append('<p class="error">' + mes + '</p>');
+    }
+    });
+
+  request.fail(function(jqXHR, textStatus) {
+    alert("Request failed: " + textStatus);
+  });
+
+};
+
+$('#delivery__form').on('submit', submitForm);
